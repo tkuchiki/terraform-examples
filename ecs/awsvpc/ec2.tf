@@ -10,6 +10,11 @@ resource "aws_instance" "dev" {
   associate_public_ip_address = true
   source_dest_check           = true
 
+  user_data = <<EOF
+#!/bin/bash
+echo ECS_CLUSTER="ecs-cluster-dev" > /etc/ecs/ecs.config
+EOF
+
   root_block_device {
     volume_type           = "gp2"
     volume_size           = 50
