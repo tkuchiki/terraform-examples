@@ -1,4 +1,3 @@
-# Sercurity Group
 ## ALB
 resource "aws_security_group" "dev_alb" {
   name        = "dev-alb"
@@ -54,7 +53,7 @@ resource "aws_security_group_rule" "dev_ec2_outbound" {
   security_group_id = "${aws_security_group.dev_ec2.id}"
 }
 
-## EC2
+## Container
 resource "aws_security_group" "dev_container" {
   name        = "dev-container"
   vpc_id      = "${var.vpc_id}"

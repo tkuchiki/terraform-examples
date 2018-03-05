@@ -4,6 +4,5 @@ data "aws_acm_certificate" "your_cert" {
   most_recent = true
 }
 
-
 # AZ
 data "aws_availability_zones" "available" {}

@@ -1,4 +1,3 @@
-# Sercurity Group
 ## ALB
 resource "aws_security_group" "dev_alb" {
   name        = "dev-alb"
