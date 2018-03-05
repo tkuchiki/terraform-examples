@@ -41,6 +41,7 @@ resource "aws_alb_target_group" "dev_ec2" {
   protocol = "HTTP"
   vpc_id   = "${var.vpc_id}"
   deregistration_delay = 60
+  target_type = "ip"
 
   health_check {
     interval = 6
